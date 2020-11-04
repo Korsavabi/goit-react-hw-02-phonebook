@@ -20,7 +20,7 @@ class TodoList extends Component {
         const { name } = objTask;
         if (this.state.contacts.every((contact) => !contact.name.includes(name))) {
             this.setState((prev) => ({
-                contacts: [...prev.contacts, objTask]
+                contacts: [...prev.contacts, {...objTask, id: uuidv4()}]
             }))
         } else alert(`${name} is already in contacts`);
     }
