@@ -2,10 +2,8 @@ import React from 'react';
 import './Todo.css';
 import PropTypes from "prop-types";
 
-const Todo = ({id, deleteTask,contacts }) => {
-    const deleteItem = () => {
-        deleteTask(id)
-    }
+const Todo = ({ deleteTask,contacts }) => {
+
     return (
         <ul>
              { 
@@ -14,7 +12,7 @@ const Todo = ({id, deleteTask,contacts }) => {
         <div>
             <p className="todo__text">{contact.name}: {contact.number}</p>
 
-            <button onClick={deleteItem}>DELETE</button>
+            <button onClick={ ()=> deleteTask(contact.id)}>DELETE</button>
         </div>
         </li>
          ))
@@ -26,6 +24,5 @@ const Todo = ({id, deleteTask,contacts }) => {
 export default Todo;
 
 Todo.propTypes ={
-    id: PropTypes.number,
     deleteTask: PropTypes.func.isRequired,
 };
