@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
+import TodoList from './TodoList/TodoList';
+
 
 class App extends Component {
-  state = {
-    contacts: [],
-    name: ''
-  }
   render() {
     return (
-      <form>
-        <p>Name</p>
-        <input placeholder='Name' type="text" />
-        <button type='submit'>Add contact</button>
-      </form>
+      <div className="App">
+        <TodoList />
+      </div>
     );
   }
 }
 
 export default App;
-
