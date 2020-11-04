@@ -26,5 +26,6 @@ const Todo = ({id, deleteTask,contacts }) => {
 export default Todo;
 
 Todo.propTypes ={
+    id: PropTypes.number,
     deleteTask: PropTypes.func.isRequired,
 };
