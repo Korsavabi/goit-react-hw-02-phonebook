@@ -23,6 +23,6 @@
 .form__btn:focus,
 .form__btn:hover{
     background-color: black;
-    border: 2px dashed red;
+    border: 5px dashed red;
     color: #fff;
 }
